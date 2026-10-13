@@ -22,9 +22,11 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
+
 REPOSITORY_URL = (
-    "https://github.com/amnafatimaa6-ops/"
-    "STAR-TRACE/archive/refs/heads/main.zip"
+    "https://raw.githubusercontent.com/"
+    "amnafatimaa6-ops/STAR-TRACE/main/"
+    "STARTRACE_deployment_assets.zip"
 )
 
 MODEL_FILES = [
