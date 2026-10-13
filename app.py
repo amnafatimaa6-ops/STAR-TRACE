@@ -13,7 +13,7 @@ import tensorflow as tf
 # GitHub ZIP uploaded from your STARTRACE project
 GITHUB_ZIP_URL = (
     "https://raw.githubusercontent.com/"
-    "YOUR_USERNAME/YOUR_REPO/main/YOUR_ZIP_NAME.zip"
+    "STARTRACE_deployment_assets.zip"
 )
 
 st.set_page_config(
