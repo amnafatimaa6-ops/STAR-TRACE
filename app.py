@@ -11,8 +11,10 @@ import matplotlib.pyplot as plt
 import tensorflow as tf
 
 # GitHub ZIP uploaded from your STARTRACE project
+
 GITHUB_ZIP_URL = (
     "https://raw.githubusercontent.com/"
+    "amnafatimaa6-ops/STAR-TRACE/main/"
     "STARTRACE_deployment_assets.zip"
 )
 
