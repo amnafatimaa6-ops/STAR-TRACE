@@ -1,7 +1,7 @@
 # 🔭 STARTRACE
 ## Learning Stellar Signal Morphology from TESS
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/amnafatimaa6-ops/STAR-TRACE/blob/main/Untitled8.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/amnafatimaa6-ops/STAR-TRACE/blob/main/notebook_star_trace.ipynb)
 
 **STARTRACE is an exploratory research project where I use real NASA TESS observations to explore the intersection of astrophysics and machine learning.**
 
