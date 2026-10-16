@@ -18,10 +18,7 @@ except ImportError:
     lk = None
     LIGHTKURVE_AVAILABLE = False
 
-
-# ============================================================
 # STAR-TRACE | Mission Control
-# ============================================================
 
 st.set_page_config(
     page_title="STAR-TRACE | Mission Control",
@@ -38,7 +35,7 @@ ASSET_ZIP_URL = (
 WINDOW_SIZE = 256
 WINDOW_STRIDE = 128
 
-# -------------------- MISSION CONTROL CSS --------------------
+# MISSION CONTROL CSS 
 
 st.markdown("""
 <style>
@@ -110,7 +107,7 @@ code {
 """, unsafe_allow_html=True)
 
 
-# -------------------- ASSET LOADER --------------------
+# ASSET LOADER 
 
 def download_assets():
     cached = st.session_state.get("_startrace_assets_dir")
@@ -170,7 +167,7 @@ def load_assets(root_string):
     return models, tables, errors
 
 
-# -------------------- SYNTHETIC DEMO --------------------
+# SYNTHETIC DEMO 
 
 def make_synthetic_signal(n=1800, seed=23):
     rng = np.random.default_rng(seed)
@@ -199,7 +196,7 @@ def make_synthetic_signal(n=1800, seed=23):
     })
 
 
-# -------------------- CSV PROCESSING --------------------
+# CSV PROCESSING 
 
 def read_lightcurve_csv(file):
     df = pd.read_csv(file)
@@ -287,7 +284,7 @@ def read_lightcurve_csv(file):
     return clean
 
 
-# -------------------- REAL TESS DATA --------------------
+# REAL TESS DATA 
 
 def fetch_tess_lightcurve(target):
     if not LIGHTKURVE_AVAILABLE:
@@ -357,7 +354,7 @@ def fetch_tess_lightcurve(target):
     return df, f"Real TESS observation: {target} ({flux_name})"
 
 
-# -------------------- MODEL PREPROCESSING --------------------
+# MODEL PREPROCESSING 
 
 def normalize_flux(flux, mode):
     flux = np.asarray(flux, dtype=np.float32)
@@ -449,7 +446,7 @@ def reconstruct_signal(model, signal):
     return (total / counts).astype(np.float32)
 
 
-# -------------------- AI PREDICTION PLOTS --------------------
+# AI PREDICTION PLOTS 
 
 def plot_prediction(time, observed, predicted, title, time_label):
     residual = observed - predicted
@@ -525,7 +522,7 @@ def plot_prediction(time, observed, predicted, title, time_label):
     return fig, residual
 
 
-# -------------------- LOAD EXISTING ASSETS --------------------
+# LOAD EXISTING ASSETS 
 
 asset_root = download_assets()
 
@@ -552,7 +549,7 @@ denoiser_name = next(
 )
 
 
-# -------------------- NAVIGATION FIX --------------------
+# NAVIGATION FIX 
 
 NAVIGATION_OPTIONS = [
     "Mission Overview",
@@ -616,9 +613,9 @@ st.markdown(
 )
 
 
-# ============================================================
-# PAGE 1: MISSION OVERVIEW
-# ============================================================
+
+# MISSION OVERVIEW
+
 
 if page == "Mission Overview":
 
@@ -683,9 +680,8 @@ if page == "Mission Overview":
     )
 
 
-# ============================================================
-# PAGE 2: SIGNAL LABORATORY
-# ============================================================
+# SIGNAL LABORATORY
+
 
 elif page == "Signal Laboratory":
 
@@ -712,7 +708,7 @@ elif page == "Signal Laboratory":
     time_label = "Time"
     source_error = None
 
-    # -------- Synthetic mode --------
+    # Synthetic mode 
 
     if source_mode == "Synthetic demo":
         data = make_synthetic_signal()
@@ -723,7 +719,7 @@ elif page == "Signal Laboratory":
             "Synthetic demonstration only — not a real observation."
         )
 
-    # -------- CSV mode --------
+    # CSV mode 
 
     elif source_mode == "Upload CSV":
 
@@ -756,7 +752,7 @@ elif page == "Signal Laboratory":
             except Exception as exc:
                 source_error = str(exc)
 
-    # -------- Real TESS mode --------
+    # Real TESS mode 
 
     elif source_mode == "Fetch real TESS observation":
 
@@ -802,7 +798,7 @@ elif page == "Signal Laboratory":
     if source_error:
         st.error(source_error)
 
-    # -------- Preview and inference --------
+    # Preview and inference 
 
     if data is not None:
 
@@ -1011,9 +1007,9 @@ elif page == "Signal Laboratory":
                 )
 
 
-# ============================================================
-# PAGE 3: MODEL INTELLIGENCE
-# ============================================================
+
+# MODEL INTELLIGENCE
+
 
 elif page == "Model Intelligence":
 
@@ -1067,9 +1063,9 @@ elif page == "Model Intelligence":
     )
 
 
-# ============================================================
-# PAGE 4: RESEARCH ARCHIVE
-# ============================================================
+
+# RESEARCH ARCHIVE
+
 
 elif page == "Research Archive":
 
@@ -1103,9 +1099,7 @@ elif page == "Research Archive":
             )
 
 
-# ============================================================
-# PAGE 5: SYSTEM DIAGNOSTICS
-# ============================================================
+# SYSTEM DIAGNOSTICS
 
 elif page == "System Diagnostics":
 
@@ -1143,7 +1137,7 @@ elif page == "System Diagnostics":
             st.write(error)
 
 
-# -------------------- FOOTER --------------------
+# FOOTER 
 
 st.divider()
 
