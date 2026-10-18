@@ -14,21 +14,20 @@ Rather than relying entirely on simulated data, I built a pipeline around real o
 This is an exploratory research pilot. I have not established independently verified labels or confirmed any new astronomical discoveries, and I have kept those limitations explicit throughout the project.
 
 
-
 ## 🎬 Demo
 
-![STAR-TRACE Demo](demo.gif)
+![STAR-TRACE Demo](VIsuals/demo.gif)
 
 ## 📸 Screenshots
 
 ### Screenshot 1
-![STAR-TRACE Screenshot 1](Screenshot1.png)
+![STAR-TRACE Screenshot 1](VIsuals/Screenshot1.png)
 
 ### Screenshot 2
-![STAR-TRACE Screenshot 2](Screenshot2.png)
+![STAR-TRACE Screenshot 2](VIsuals/Screenshot2.png)
 
 ### Screenshot 3
-![STAR-TRACE Screenshot 3](Screenshot3.png)
+![STAR-TRACE Screenshot 3](VIsuals/Screenshot3.png)
 
 ---
 
