@@ -14,20 +14,21 @@ Rather than relying entirely on simulated data, I built a pipeline around real o
 This is an exploratory research pilot. I have not established independently verified labels or confirmed any new astronomical discoveries, and I have kept those limitations explicit throughout the project.
 
 
-##  Demo
 
-![NeuroForge Demo](demo.gif)
+## 🎬 Demo
+
+![STAR-TRACE Demo](demo.gif)
 
 ## 📸 Screenshots
 
 ### Screenshot 1
-![NeuroForge Screenshot 1](Screenshot1.png)
+![STAR-TRACE Screenshot 1](Screenshot1.png)
 
 ### Screenshot 2
-![NeuroForge Screenshot 2](Screenshot2.png)
+![STAR-TRACE Screenshot 2](Screenshot2.png)
 
 ### Screenshot 3
-![NeuroForge Screenshot 3](Screenshot3.png)
+![STAR-TRACE Screenshot 3](Screenshot3.png)
 
 ---
 
